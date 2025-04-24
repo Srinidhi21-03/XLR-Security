@@ -1,62 +1,86 @@
+/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling with contrast colors */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff; /* white background */
-    color: #000000; /* black text */
-    line-height: 1.6;
-    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a192f; /* Dark blue background */
+    color: #ffffff; /* White text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
 }
 
+/* Header Section Styles */
 header {
     text-align: center;
     margin-bottom: 40px;
+    max-width: 800px;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #000; /* black */
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #64ffda; /* Teal accent color */
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #333;
+header h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ccd6f6; /* Light blue-gray */
 }
 
+header p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* Gallery Grid Layout */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.card:hover {
-    transform: scale(1.02);
-}
-
-.card img {
     width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.card p {
-    font-size: 0.95rem;
-    color: #000000;
-    margin: 0;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.project-card {
+    background: #112240; /* Slightly lighter blue */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 15px;
+    color: #64ffda; /* Teal accent */
+    font-size: 1.3rem;
+}
+
+.project-card p {
+    padding: 0 15px 15px;
+    color: #8892b0; /* Gray-blue for less important text */
 }
